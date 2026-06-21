@@ -8,7 +8,7 @@ export default function Showcase() {
   const [ref1, inView1] = useInView({ threshold: 0.2, triggerOnce: true })
   const [ref2, inView2] = useInView({ threshold: 0.2, triggerOnce: true })
   const [ref3, inView3] = useInView({ threshold: 0.2, triggerOnce: true })
-  const [ref4, inView4] = useInView({ threshold: 0.2, triggerOnce: true })
+  const [ref4, inView4] = useInView({ threshold: 0.2, triggerOnce: false })
 
   return (
     <section className="showcase" id="showcase">
@@ -262,31 +262,56 @@ export default function Showcase() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', position: 'relative' }}>
           {/* Horizontal Line behind steps */}
-          <div style={{ position: 'absolute', top: '20px', left: '10%', right: '10%', height: '2px', background: 'linear-gradient(90deg, var(--accent-cyan), var(--accent-purple))', zIndex: 0, opacity: 0.3 }}></div>
+          <motion.div 
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={inView4 ? { scaleX: 1, opacity: 0.3 } : {}}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            style={{ position: 'absolute', top: '20px', left: '10%', right: '10%', height: '2px', background: 'linear-gradient(90deg, var(--accent-cyan), var(--accent-purple))', zIndex: 0, transformOrigin: 'left' }}
+          ></motion.div>
           
-          <div style={{ position: 'relative', zIndex: 1, background: 'var(--bg-base)', padding: '1rem' }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView4 ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            style={{ position: 'relative', zIndex: 1, background: 'var(--bg-base)', padding: '1rem' }}
+          >
             <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--border-medium)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', fontWeight: 800 }}>01</div>
             <h4 style={{ marginBottom: '1rem' }}>Pick your target company</h4>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Search 350+ companies and open a focused prep track with their actual assessment pattern.</p>
-          </div>
+          </motion.div>
 
-          <div style={{ position: 'relative', zIndex: 1, background: 'var(--bg-base)', padding: '1rem' }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView4 ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            style={{ position: 'relative', zIndex: 1, background: 'var(--bg-base)', padding: '1rem' }}
+          >
             <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--border-medium)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', fontWeight: 800 }}>02</div>
             <h4 style={{ marginBottom: '1rem' }}>Practice the real questions</h4>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Solve verified OA problems in a timed, exam-like editor with hidden test cases.</p>
-          </div>
+          </motion.div>
 
-          <div style={{ position: 'relative', zIndex: 1, background: 'var(--bg-base)', padding: '1rem' }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView4 ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            style={{ position: 'relative', zIndex: 1, background: 'var(--bg-base)', padding: '1rem' }}
+          >
             <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--border-medium)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', fontWeight: 800 }}>03</div>
             <h4 style={{ marginBottom: '1rem' }}>Learn from experiences</h4>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Read round-by-round interview stories and the exact tips that converted offers.</p>
-          </div>
+          </motion.div>
 
-          <div style={{ position: 'relative', zIndex: 1, background: 'var(--bg-base)', padding: '1rem' }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView4 ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            style={{ position: 'relative', zIndex: 1, background: 'var(--bg-base)', padding: '1rem' }}
+          >
             <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--border-medium)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', fontWeight: 800 }}>04</div>
             <h4 style={{ marginBottom: '1rem' }}>Walk in confident</h4>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Show up to test day having already seen the pattern — and land the offer.</p>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
 
