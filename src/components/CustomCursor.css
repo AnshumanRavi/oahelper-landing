@@ -1,0 +1,46 @@
+/* ===== CUSTOM CURSOR ===== */
+.custom-cursor-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+.custom-cursor-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-cyan);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px var(--accent-cyan);
+}
+
+.custom-cursor-ring {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(139, 92, 246, 0.6); /* purple ring */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+  transition: width 0.2s, height 0.2s;
+}
+
+/* Optional hover state class for expanding ring */
+.custom-cursor-ring.hovering {
+  width: 60px;
+  height: 60px;
+  background: rgba(139, 92, 246, 0.1);
+  border-color: var(--accent-purple);
+}
+
+@media (max-width: 1024px) {
+  .custom-cursor-container {
+    display: none; /* Hide custom cursor on mobile/tablets */
+  }
+}

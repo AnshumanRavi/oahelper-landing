@@ -1,0 +1,294 @@
+/* ===== COMPANIES SECTION ===== */
+.companies {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.companies-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Section Title ── */
+.companies-title {
+  text-align: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.companies-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin-top: 0.75rem;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+}
+
+/* ── Marquee Container ── */
+.companies-marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Gradient fade on edges */
+.companies-marquee-wrapper::before,
+.companies-marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.companies-marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg-card), transparent);
+}
+
+.companies-marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg-card), transparent);
+}
+
+/* ── Marquee Track ── */
+.companies-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.companies-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ── Logo Items ── */
+.companies-logo-set {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2.5rem;
+  flex-shrink: 0;
+  cursor: default;
+  transition: all var(--transition-base);
+}
+
+.company-logo-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.375rem;
+  color: var(--text-muted);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: all var(--transition-base);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.company-logo:hover .company-logo-text {
+  color: var(--text-primary);
+}
+
+/* ── Individual Logo Styling ── */
+.logo-nvidia .company-logo-text {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.logo-nvidia .company-logo-icon {
+  color: #76b900;
+  font-size: 1.25rem;
+  opacity: 0.4;
+  transition: opacity var(--transition-base);
+}
+
+.logo-nvidia:hover .company-logo-icon {
+  opacity: 1;
+}
+
+.logo-visa .company-logo-text {
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  font-size: 1.5rem;
+}
+
+.logo-stripe .company-logo-text {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.logo-adobe .company-logo-text {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.logo-adobe .company-logo-icon {
+  color: #ff0000;
+  opacity: 0.4;
+  transition: opacity var(--transition-base);
+}
+
+.logo-adobe:hover .company-logo-icon {
+  opacity: 1;
+}
+
+.logo-databricks .company-logo-text {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo-atlassian .company-logo-text {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.logo-uber .company-logo-text {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  font-size: 1.5rem;
+}
+
+.logo-flipkart .company-logo-text {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.logo-flipkart .company-logo-icon {
+  color: #f7d716;
+  font-size: 0.875rem;
+  opacity: 0.4;
+  transition: opacity var(--transition-base);
+}
+
+.logo-flipkart:hover .company-logo-icon {
+  opacity: 1;
+}
+
+.logo-google .company-logo-text {
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.logo-microsoft .company-logo-text {
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.logo-microsoft .company-logo-icon {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  opacity: 0.4;
+  transition: opacity var(--transition-base);
+}
+
+.logo-microsoft:hover .company-logo-icon {
+  opacity: 1;
+}
+
+.logo-microsoft .ms-square {
+  width: 8px;
+  height: 8px;
+}
+
+.logo-amazon .company-logo-text {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 1.375rem;
+}
+
+.logo-goldman .company-logo-text {
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: 0.02em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .companies {
+    padding: 2rem 0;
+  }
+
+  .companies-inner {
+    padding: 2rem 0;
+    border-radius: var(--radius-lg);
+    margin: 0 var(--container-padding);
+  }
+
+  .company-logo {
+    padding: 0.5rem 1.75rem;
+  }
+
+  .company-logo-text {
+    font-size: 1.125rem;
+  }
+
+  .logo-visa .company-logo-text,
+  .logo-uber .company-logo-text,
+  .logo-google .company-logo-text {
+    font-size: 1.25rem;
+  }
+
+  .companies-marquee-wrapper::before,
+  .companies-marquee-wrapper::after {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .companies-title {
+    font-size: 0.5625rem;
+    letter-spacing: 0.15em;
+  }
+
+  .company-logo {
+    padding: 0.5rem 1.25rem;
+  }
+
+  .company-logo-text {
+    font-size: 1rem;
+  }
+
+  .logo-visa .company-logo-text,
+  .logo-uber .company-logo-text,
+  .logo-google .company-logo-text {
+    font-size: 1.125rem;
+  }
+}

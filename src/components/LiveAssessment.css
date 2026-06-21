@@ -1,0 +1,297 @@
+/* ===== LIVE ASSESSMENT ===== */
+.live-assessment-section {
+  padding: var(--section-padding) 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.la-header {
+  max-width: 800px;
+  margin-bottom: 4rem;
+}
+
+.la-tag {
+  color: var(--accent-purple);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.la-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.la-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.la-window {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(15, 18, 25, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.8), 0 0 50px rgba(139, 92, 246, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  animation: float-la 14s ease-in-out infinite reverse;
+}
+
+@keyframes float-la {
+  0% { transform: perspective(1200px) rotateY(3deg) rotateX(-2deg) translateY(0px); }
+  50% { transform: perspective(1200px) rotateY(0deg) rotateX(1deg) translateY(-10px); }
+  100% { transform: perspective(1200px) rotateY(3deg) rotateX(-2deg) translateY(0px); }
+}
+
+.la-window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.la-mac-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.la-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+}
+.la-dot.close { background: #ff5f56; }
+.la-dot.min { background: #ffbd2e; }
+.la-dot.max { background: #27c93f; }
+
+.la-window-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.la-timer-badge {
+  background: rgba(251, 191, 36, 0.1);
+  color: #fbbf24;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.la-timer-badge.danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.la-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+/* Intro State */
+.la-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.la-terminal-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(139, 92, 246, 0.2);
+  color: var(--accent-purple);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.la-intro h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+.la-intro p {
+  color: var(--text-secondary);
+  max-width: 350px;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.la-start-btn {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+}
+
+.la-start-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 100%; height: 100%;
+  border-radius: 100px;
+  border: 2px solid var(--accent-cyan);
+  transform: translate(-50%, -50%);
+  animation: btn-radar-pulse 2s cubic-bezier(0.1, 0.7, 0.3, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes btn-radar-pulse {
+  0% { width: 100%; height: 100%; opacity: 0.8; }
+  100% { width: 130%; height: 160%; opacity: 0; }
+}
+
+.la-start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Playing State */
+.la-playing {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.la-question-num {
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.la-question-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.la-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.la-option-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.la-option-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+
+.la-option-btn.correct {
+  background: rgba(46, 160, 67, 0.1);
+  border-color: #2ea043;
+  color: #2ea043;
+}
+
+.la-option-btn.wrong {
+  background: rgba(248, 81, 73, 0.1);
+  border-color: #f85149;
+  color: #f85149;
+}
+
+/* Result State */
+.la-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.la-score-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.1);
+  border: 2px solid var(--accent-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.la-result h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.la-result p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .la-title {
+    font-size: 2rem;
+  }
+  .la-window {
+    min-height: 450px;
+  }
+}
