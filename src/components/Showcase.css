@@ -395,59 +395,6 @@
   color: var(--text-secondary);
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
-  .showcase-block,
-  .showcase-block.reverse {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  /* On tablet/mobile, text always comes first */
-  .showcase-block.reverse .showcase-content {
-    order: -1;
-  }
-}
-
-@media (max-width: 768px) {
-  .showcase-heading {
-    font-size: 2.25rem;
-  }
-
-  .experience-cards-wrapper {
-    height: 340px;
-  }
-
-  .exp-card {
-    padding: 1.25rem;
-  }
-
-  .cp-stats-row {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .showcase-heading {
-    font-size: 1.875rem;
-  }
-
-  .experience-cards-wrapper {
-    height: 320px;
-  }
-
-  .company-profile-card {
-    padding: 1.5rem;
-  }
-
-  .cp-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-}
-
 /* ── Block 3: Roadmap Mockup ── */
 .roadmap-visual-card {
   background: var(--bg-card);
@@ -568,7 +515,7 @@
   font-family: var(--font-display);
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ef4444; /* Red timer */
+  color: #ef4444;
   letter-spacing: 0.05em;
   text-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
 }
@@ -635,24 +582,168 @@
   border-radius: var(--radius-full);
 }
 
-.btn-showcase-purple {
-  background: rgba(139, 92, 246, 0.1);
-  color: #a78bfa;
-  border: 1px solid rgba(139, 92, 246, 0.2);
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .showcase-block,
+  .showcase-block.reverse {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* On tablet/mobile, text always comes first */
+  .showcase-block.reverse .showcase-content {
+    order: -1;
+  }
+
+  .showcase-visual {
+    justify-content: center;
+    min-height: auto;
+  }
+
+  .experience-cards-wrapper,
+  .company-profile-card,
+  .roadmap-visual-card,
+  .assessment-mockup-card {
+    margin: 0 auto;
+  }
 }
 
-.btn-showcase-purple:hover {
-  background: rgba(139, 92, 246, 0.2);
-  gap: 0.75rem;
+@media (max-width: 768px) {
+  .showcase-heading {
+    font-size: 2rem;
+  }
+
+  .showcase-block,
+  .showcase-block.reverse {
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .showcase-visual {
+    min-height: auto;
+  }
+
+  .experience-cards-wrapper {
+    height: 320px;
+    max-width: 100%;
+  }
+
+  .exp-card {
+    padding: 1.25rem;
+  }
+
+  .cp-stats-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .company-profile-card {
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  .roadmap-visual-card {
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  .assessment-mockup-card {
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  .assessment-timer {
+    font-size: 2rem;
+  }
 }
 
-.btn-showcase-red {
-  background: rgba(239, 68, 68, 0.1);
-  color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.2);
-}
+@media (max-width: 480px) {
+  .showcase {
+    padding: var(--section-padding) 0;
+  }
 
-.btn-showcase-red:hover {
-  background: rgba(239, 68, 68, 0.2);
-  gap: 0.75rem;
+  .showcase-block,
+  .showcase-block.reverse {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .showcase-heading {
+    font-size: 1.75rem;
+  }
+
+  .showcase-desc {
+    font-size: 0.875rem;
+  }
+
+  .experience-cards-wrapper {
+    height: 280px;
+  }
+
+  .exp-card-2 {
+    top: 50px;
+    left: 20px;
+  }
+
+  .exp-card-3 {
+    top: 100px;
+    left: 40px;
+  }
+
+  .company-profile-card {
+    padding: 1.5rem;
+  }
+
+  .cp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .cp-logo-box {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .cp-title h3 {
+    font-size: 1.25rem;
+  }
+
+  .roadmap-visual-card {
+    padding: 1.5rem;
+  }
+
+  .roadmap-node {
+    gap: 1rem;
+  }
+
+  .roadmap-content h4 {
+    font-size: 0.875rem;
+  }
+
+  .roadmap-content p {
+    font-size: 0.6875rem;
+  }
+
+  .assessment-mockup-card {
+    padding: 1.5rem;
+  }
+
+  .assessment-timer {
+    font-size: 1.75rem;
+  }
+
+  .assessment-companies {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .company-select-card {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .company-select-card h5 {
+    font-size: 0.75rem;
+  }
 }

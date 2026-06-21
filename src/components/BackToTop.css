@@ -27,9 +27,19 @@
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 1.5rem;
-    right: 5rem;
-    width: 45px;
-    height: 45px;
-    font-size: 1.25rem;
+    right: 4.5rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 1.25rem;
+    right: 4rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
   }
 }

@@ -288,10 +288,93 @@
 }
 
 @media (max-width: 768px) {
+  .live-assessment-section {
+    padding: var(--section-padding) var(--container-padding);
+  }
+
   .la-title {
     font-size: 2rem;
   }
+
+  .la-header {
+    margin-bottom: 2.5rem;
+  }
+
   .la-window {
-    min-height: 450px;
+    min-height: 400px;
+  }
+
+  .la-window-header {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .la-title {
+    font-size: 1.75rem;
+  }
+
+  .la-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .la-header {
+    margin-bottom: 2rem;
+  }
+
+  .la-window {
+    min-height: 350px;
+    border-radius: 10px;
+  }
+
+  .la-window-header {
+    padding: 0.625rem 0.75rem;
+  }
+
+  .la-window-title {
+    font-size: 0.75rem;
+  }
+
+  .la-timer-badge {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .la-body {
+    padding: 1.25rem 1rem;
+  }
+
+  .la-question-text {
+    font-size: 0.95rem;
+  }
+
+  .la-option-btn {
+    font-size: 0.8125rem;
+    padding: 0.625rem 0.875rem;
+  }
+
+  .la-start-btn {
+    font-size: 0.8125rem;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .la-intro h3 {
+    font-size: 1.125rem;
+  }
+
+  .la-intro p {
+    font-size: 0.8125rem;
+  }
+
+  .la-score-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  .la-result h3 {
+    font-size: 1.5rem;
   }
 }

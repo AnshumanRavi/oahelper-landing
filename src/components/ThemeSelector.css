@@ -113,3 +113,26 @@
     left: 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .theme-selector-container {
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .theme-toggle-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .theme-menu {
+    min-width: 160px;
+    padding: 0.5rem;
+  }
+
+  .theme-option {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+}

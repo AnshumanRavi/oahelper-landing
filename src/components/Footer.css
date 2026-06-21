@@ -183,13 +183,50 @@
 }
 
 @media (max-width: 576px) {
+  .footer {
+    padding: 4rem 0 2rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+    margin-bottom: 3rem;
   }
+
   .footer-bottom {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
+  }
+
+  .newsletter-input-group {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-brand-text {
+    font-size: 1.25rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.875rem;
+  }
+
+  .footer-col h4 {
+    font-size: 0.9375rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-links a {
+    font-size: 0.8125rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
   }
 }

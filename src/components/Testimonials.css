@@ -197,4 +197,56 @@
   .testimonials-heading {
     font-size: 2.25rem;
   }
+
+  .testimonials-header {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-heading {
+    font-size: 1.75rem;
+  }
+
+  .testimonials-subtitle {
+    font-size: 1rem;
+  }
+
+  .testimonials-header {
+    margin-bottom: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 1.75rem;
+  }
+
+  .t-quote {
+    font-size: 0.9375rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .quote-icon {
+    font-size: 3rem;
+    top: 1rem;
+    right: 1.5rem;
+  }
+
+  .t-footer {
+    gap: 0.75rem;
+    padding-top: 1.25rem;
+  }
+
+  .t-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .t-name {
+    font-size: 0.9375rem;
+  }
+
+  .t-college {
+    font-size: 0.75rem;
+  }
 }

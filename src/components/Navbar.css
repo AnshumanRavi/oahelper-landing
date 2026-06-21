@@ -333,6 +333,8 @@
   gap: 5px;
   padding: 0;
   transition: border-color var(--transition-base);
+  position: relative;
+  z-index: 1001;
 }
 
 .navbar-mobile-toggle:hover {
